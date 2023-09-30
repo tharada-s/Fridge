@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		737946492AC80AD100E14A57 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 737946482AC80AD100E14A57 /* ComposableArchitecture */; };
+		737946522AC80D4200E14A57 /* TopCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737946512AC80D4200E14A57 /* TopCore.swift */; };
 		73BE92ED2AC7F7CF00414DA0 /* FridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE92EC2AC7F7CF00414DA0 /* FridgeApp.swift */; };
-		73BE92EF2AC7F7CF00414DA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE92EE2AC7F7CF00414DA0 /* ContentView.swift */; };
+		73BE92EF2AC7F7CF00414DA0 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE92EE2AC7F7CF00414DA0 /* TopView.swift */; };
 		73BE92F12AC7F7D000414DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73BE92F02AC7F7D000414DA0 /* Assets.xcassets */; };
 		73BE92F42AC7F7D000414DA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73BE92F32AC7F7D000414DA0 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		737946512AC80D4200E14A57 /* TopCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCore.swift; sourceTree = "<group>"; };
 		73BE92E92AC7F7CF00414DA0 /* Fridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BE92EC2AC7F7CF00414DA0 /* FridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeApp.swift; sourceTree = "<group>"; };
-		73BE92EE2AC7F7CF00414DA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		73BE92EE2AC7F7CF00414DA0 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		73BE92F02AC7F7D000414DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73BE92F32AC7F7D000414DA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,12 +29,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737946492AC80AD100E14A57 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7379464F2AC80D1E00E14A57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73BE92EE2AC7F7CF00414DA0 /* TopView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		737946502AC80D2900E14A57 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				737946512AC80D4200E14A57 /* TopCore.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		73BE92E02AC7F7CF00414DA0 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				73BE92EC2AC7F7CF00414DA0 /* FridgeApp.swift */,
-				73BE92EE2AC7F7CF00414DA0 /* ContentView.swift */,
+				737946502AC80D2900E14A57 /* Core */,
+				7379464F2AC80D1E00E14A57 /* View */,
 				73BE92F02AC7F7D000414DA0 /* Assets.xcassets */,
 				73BE92F22AC7F7D000414DA0 /* Preview Content */,
 			);
@@ -83,6 +104,9 @@
 			dependencies = (
 			);
 			name = Fridge;
+			packageProductDependencies = (
+				737946482AC80AD100E14A57 /* ComposableArchitecture */,
+			);
 			productName = Fridge;
 			productReference = 73BE92E92AC7F7CF00414DA0 /* Fridge.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 73BE92E02AC7F7CF00414DA0;
+			packageReferences = (
+				737946472AC80AD100E14A57 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 73BE92EA2AC7F7CF00414DA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73BE92EF2AC7F7CF00414DA0 /* ContentView.swift in Sources */,
+				73BE92EF2AC7F7CF00414DA0 /* TopView.swift in Sources */,
 				73BE92ED2AC7F7CF00414DA0 /* FridgeApp.swift in Sources */,
+				737946522AC80D4200E14A57 /* TopCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -275,6 +303,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +333,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		737946472AC80AD100E14A57 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		737946482AC80AD100E14A57 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 737946472AC80AD100E14A57 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73BE92E12AC7F7CF00414DA0 /* Project object */;
 }
