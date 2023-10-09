@@ -1,11 +1,27 @@
+import Foundation
 import ComposableArchitecture
 
 struct Top: Reducer {
-    struct State: Equatable{}
+    static let minImageScale = 1.0
+    static let maxImageScale = 1.5
     
-    struct Action: Equatable {}
+    struct State: Equatable{
+        var imageScale: CGFloat = 1.0
+        var imageFlag: Bool = false
+    }
     
-    func reduce(into state: inout State, action: Action) -> Effect<Action> {
-        return .none
+    enum Action: Equatable {
+        case onTapFridgeImage
+    }
+    
+    var body: some Reducer<State, Action> {
+        Reduce { state, action in
+            switch action {
+            case .onTapFridgeImage:
+                state.imageFlag.toggle()
+                state.imageScale = state.imageFlag ? Self.maxImageScale : Self.minImageScale
+                return .none
+            }
+        }
     }
 }

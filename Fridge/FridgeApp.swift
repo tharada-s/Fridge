@@ -1,10 +1,11 @@
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct FridgeApp: App {
     var body: some Scene {
         WindowGroup {
-            TopView()
+            TopView(store: StoreOf<Top>(initialState: Top.State()) { Top() })
         }
     }
 }
