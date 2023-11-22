@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730F7D072AED3C070033ACD6 /* SuggestMemoTextViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730F7D062AED3C070033ACD6 /* SuggestMemoTextViewModifier.swift */; };
 		737946492AC80AD100E14A57 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 737946482AC80AD100E14A57 /* ComposableArchitecture */; };
-		737946522AC80D4200E14A57 /* TopCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737946512AC80D4200E14A57 /* TopCore.swift */; };
+		737946522AC80D4200E14A57 /* Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737946512AC80D4200E14A57 /* Top.swift */; };
+		737946542AD4242800E14A57 /* FridgeModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737946532AD4242800E14A57 /* FridgeModalView.swift */; };
+		737946572AD424AD00E14A57 /* Fridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737946562AD424AD00E14A57 /* Fridge.swift */; };
+		737946592AECFD7B00E14A57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 737946582AECFD7B00E14A57 /* Colors.xcassets */; };
+		7379465C2AECFE4000E14A57 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7379465B2AECFE4000E14A57 /* Color+.swift */; };
 		73BE92ED2AC7F7CF00414DA0 /* FridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE92EC2AC7F7CF00414DA0 /* FridgeApp.swift */; };
 		73BE92EF2AC7F7CF00414DA0 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE92EE2AC7F7CF00414DA0 /* TopView.swift */; };
 		73BE92F12AC7F7D000414DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73BE92F02AC7F7D000414DA0 /* Assets.xcassets */; };
@@ -16,7 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		737946512AC80D4200E14A57 /* TopCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCore.swift; sourceTree = "<group>"; };
+		730F7D062AED3C070033ACD6 /* SuggestMemoTextViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestMemoTextViewModifier.swift; sourceTree = "<group>"; };
+		737946512AC80D4200E14A57 /* Top.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top.swift; sourceTree = "<group>"; };
+		737946532AD4242800E14A57 /* FridgeModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeModalView.swift; sourceTree = "<group>"; };
+		737946562AD424AD00E14A57 /* Fridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fridge.swift; sourceTree = "<group>"; };
+		737946582AECFD7B00E14A57 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7379465B2AECFE4000E14A57 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		73BE92E92AC7F7CF00414DA0 /* Fridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BE92EC2AC7F7CF00414DA0 /* FridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeApp.swift; sourceTree = "<group>"; };
 		73BE92EE2AC7F7CF00414DA0 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
@@ -36,10 +46,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		730F7D042AED3BDF0033ACD6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				730F7D052AED3BEB0033ACD6 /* ViewModifier */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		730F7D052AED3BEB0033ACD6 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				730F7D062AED3C070033ACD6 /* SuggestMemoTextViewModifier.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
 		7379464F2AC80D1E00E14A57 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				73BE92EE2AC7F7CF00414DA0 /* TopView.swift */,
+				730F7D042AED3BDF0033ACD6 /* Common */,
+				737946552AD4242C00E14A57 /* Top */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -47,9 +74,27 @@
 		737946502AC80D2900E14A57 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				737946512AC80D4200E14A57 /* TopCore.swift */,
+				737946512AC80D4200E14A57 /* Top.swift */,
+				737946562AD424AD00E14A57 /* Fridge.swift */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		737946552AD4242C00E14A57 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				73BE92EE2AC7F7CF00414DA0 /* TopView.swift */,
+				737946532AD4242800E14A57 /* FridgeModalView.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		7379465A2AECFE2D00E14A57 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7379465B2AECFE4000E14A57 /* Color+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		73BE92E02AC7F7CF00414DA0 = {
@@ -71,10 +116,12 @@
 		73BE92EB2AC7F7CF00414DA0 /* Fridge */ = {
 			isa = PBXGroup;
 			children = (
+				7379465A2AECFE2D00E14A57 /* Extensions */,
 				73BE92EC2AC7F7CF00414DA0 /* FridgeApp.swift */,
 				737946502AC80D2900E14A57 /* Core */,
 				7379464F2AC80D1E00E14A57 /* View */,
 				73BE92F02AC7F7D000414DA0 /* Assets.xcassets */,
+				737946582AECFD7B00E14A57 /* Colors.xcassets */,
 				73BE92F22AC7F7D000414DA0 /* Preview Content */,
 			);
 			path = Fridge;
@@ -152,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737946592AECFD7B00E14A57 /* Colors.xcassets in Resources */,
 				73BE92F42AC7F7D000414DA0 /* Preview Assets.xcassets in Resources */,
 				73BE92F12AC7F7D000414DA0 /* Assets.xcassets in Resources */,
 			);
@@ -165,8 +213,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				73BE92EF2AC7F7CF00414DA0 /* TopView.swift in Sources */,
+				7379465C2AECFE4000E14A57 /* Color+.swift in Sources */,
 				73BE92ED2AC7F7CF00414DA0 /* FridgeApp.swift in Sources */,
-				737946522AC80D4200E14A57 /* TopCore.swift in Sources */,
+				737946522AC80D4200E14A57 /* Top.swift in Sources */,
+				737946572AD424AD00E14A57 /* Fridge.swift in Sources */,
+				730F7D072AED3C070033ACD6 /* SuggestMemoTextViewModifier.swift in Sources */,
+				737946542AD4242800E14A57 /* FridgeModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
